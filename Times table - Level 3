@@ -1,19 +1,23 @@
 def on_button_pressed_a():
     global a
-    basic.show_number(a)
     a += 1
+    basic.show_number(a)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_ab():
-    c = 0
-    basic.show_number(c)
+    basic.show_number(a * b)
+    basic.clear_screen()
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
 def on_button_pressed_b():
     global b
-    basic.show_number(b)
     b += 1
+    basic.show_number(b)
 input.on_button_pressed(Button.B, on_button_pressed_b)
+
+def on_logo_pressed():
+    pass
+input.on_logo_event(TouchButtonEvent.PRESSED, on_logo_pressed)
 
 b = 0
 a = 0
