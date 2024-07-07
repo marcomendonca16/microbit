@@ -1,0 +1,20 @@
+def on_button_pressed_a():
+    basic.show_number(a)
+input.on_button_pressed(Button.A, on_button_pressed_a)
+
+def on_button_pressed_ab():
+    basic.show_number(a * b)
+input.on_button_pressed(Button.AB, on_button_pressed_ab)
+
+def on_button_pressed_b():
+    basic.show_number(b)
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+def on_logo_touched():
+    control.reset()
+input.on_logo_event(TouchButtonEvent.TOUCHED, on_logo_touched)
+
+b = 0
+a = 0
+a = randint(2, 10)
+b = randint(2, 10)
